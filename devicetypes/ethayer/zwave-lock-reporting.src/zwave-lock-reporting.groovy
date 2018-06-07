@@ -180,6 +180,7 @@ def zwaveEvent(DoorLockOperationReport cmd) {
 def zwaveEvent(physicalgraph.zwave.commands.alarmv2.AlarmReport cmd) {
 	def result = []
 	def map = null
+	log.debug "cmd: $cmd"
 	if (cmd.zwaveAlarmType == 6) {
 		if (1 <= cmd.zwaveAlarmEvent && cmd.zwaveAlarmEvent < 10) {
 			map = [ name: "lock", value: (cmd.zwaveAlarmEvent & 1) ? "locked" : "unlocked" ]
