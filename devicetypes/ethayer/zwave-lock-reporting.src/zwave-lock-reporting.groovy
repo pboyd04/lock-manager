@@ -12,7 +12,7 @@
  *
  */
 metadata {
-	definition (name: "Z-Wave Lock Reporting", namespace: "ethayer", author: "SmartThings") {
+	definition (name: "Z-Wave Lock Reporting", namespace: "pboyd04", author: "SmartThings") {
 		capability "Actuator"
 		capability "Lock"
 		capability "Polling"
